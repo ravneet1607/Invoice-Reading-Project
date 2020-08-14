@@ -1,0 +1,189 @@
+<div class="container-fluid" id="mainDiv">
+    <div class="row">
+    <div class="col-sm-12">
+        <div class="card" >
+            <div class="card-body white-text">
+                <div class="row">
+                    <h4 style="font-weight: bold; text-align:center">Invoice Detailed View</h4>
+                        <form name="form" #EditForm="ngForm" (ngSubmit) = "UpdateInvoiceData(EditForm)">
+                            <div class="col-sm-5" id="formDiv">
+                             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="selectedInvoice._id"> 
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Buyer Name</label>
+                                        <input type="text" id="BuyerName" name="BuyerName" class="form-control" [(ngModel)]="selectedInvoice.BuyerName" #BuyerName="ngModel">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Seller Name</label>
+                                        <input type="text" id="SellerName" name="SellerName" class="form-control" [(ngModel)]="selectedInvoice.SellerName" #SellerName="ngModel">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Buyer Address</label>
+                                        <input type="text" name="BuyerAddress" class="form-control" [(ngModel)]="selectedInvoice.BuyerAddress" #BuyerAddress="ngModel" placeholder="Enter Buyer Address">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Seller Address</label>
+                                        <input type="text" name="SellerAddress" class="form-control" [(ngModel)]="selectedInvoice.SellerAddress" #SellerAddress="ngModel" placeholder="Enter Seller Address">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Buyer GST</label>
+                                        <input type="text" id="BuyerGST" name="BuyerGST" class="form-control" [(ngModel)]="selectedInvoice.BuyerGST" #BuyerGST="ngModel">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Seller GST</label>
+                                        <input type="text" id="SellerGST" name="SellerGST" class="form-control" [(ngModel)]="selectedInvoice.SellerGST" #Seller_GST="ngModel">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Buyer PAN</label>
+                                        <input type="text" name="BuyerPAN" class="form-control" [(ngModel)]="selectedInvoice.BuyerPAN" #BuyerPAN="ngModel" placeholder="Enter Buyer PAN">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Seller PAN</label>
+                                        <input type="text" name="SellerPAN" id="Seller_Pan" class="form-control" [(ngModel)]="selectedInvoice.SellerPAN" #SellerPAN="ngModel" placeholder="Enter Seller PAN">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Buyer CIN</label>
+                                        <input type="text" name="BuyerCIN" class="form-control" [(ngModel)]="selectedInvoice.BuyerCIN" #BuyerCIN="ngModel" placeholder="Enter Buyer CIN">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Seller CIN</label>
+                                        <input type="text" name="SellerCIN" class="form-control" [(ngModel)]="selectedInvoice.SellerCIN" #SellerAddress="ngModel" placeholder="Enter Seller CIN">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>PO Number</label>
+                                        <input type="text" name="PONum" class="form-control" [(ngModel)]="selectedInvoice.PONum" #PONum="ngModel" placeholder="Enter PO Number">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Email Id</label>
+                                        <input type="text" name="EmailID" class="form-control" [(ngModel)]="selectedInvoice.EmailID" #EmailID="ngModel" placeholder="Enter Email Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Invoice Number</label>
+                                        <input type="text" id="InvoiceNumber" name="InvoiceNumber" class="form-control" [(ngModel)]="selectedInvoice.InvoiceNumber" #InvoiceNumer="ngModel" >
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Invoice Date</label>
+                                        <input type="text" id="InvoiceDate" name="InvoiceDate" class="form-control" [(ngModel)]="selectedInvoice.InvoiceDate" #InvoiceDate="ngModel">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Order Number</label>
+                                        <input type="text" name="OrderNumber" class="form-control" [(ngModel)]="selectedInvoice.OrderNumber" #OrderNumber="ngModel" placeholder="Enter Order Number">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Shipment Address</label>
+                                        <input type="text" name="ShipmentAddress" class="form-control" [(ngModel)]="selectedInvoice.ShipmentAddress" #ShipmentAddress="ngModel" placeholder="Enter Shipment Adress">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>CGST</label>
+                                        <input type="text" name="CGST" class="form-control" [(ngModel)]="selectedInvoice.CGST" #CGST="ngModel" placeholder="Enter CGST">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>SGST</label>
+                                        <input type="text" name="SGST" class="form-control" [(ngModel)]="selectedInvoice.SGST" #SGST="ngModel" placeholder="Enter SGST">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>IGST</label>
+                                        <input type="text" name="IGST" class="form-control" [(ngModel)]="selectedInvoice.IGST" #IGST="ngModel" placeholder="Enter IGST">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Net Total</label>
+                                        <input type="text" name="NetTotal" class="form-control" [(ngModel)]="selectedInvoice.NetTotal" #NetTotal="ngModel" placeholder="Enter Net Total">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Bank Name</label>
+                                        <input type="text" name="BankName" class="form-control" [(ngModel)]="selectedInvoice.BankName" #BankName="ngModel" placeholder="Enter Bank Name">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Bank Account Number</label>
+                                        <input type="text" name="BankAccountNumber" class="form-control" [(ngModel)]="selectedInvoice.BankAccountNumber" #BankAccountNumber="ngModel" placeholder="Enter Bank Account Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label>Beneficiary Name</label>
+                                        <input type="text" name="BeneficiaryName" class="form-control" [(ngModel)]="selectedInvoice.BeneficiaryName" #BeneficiaryName="ngModel" placeholder="Enter Beneficiary Name">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>IFSC Code</label>
+                                        <input type="text" name="IFSC" class="form-control" [(ngModel)]="selectedInvoice.IFSC" #IFSC="ngModel" placeholder="Enter IFSC Code">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" id="pdfDiv">
+                                <div class="row" >
+                                    <pdf-viewer
+                                        [src]="pdfSrc"
+                                        [render-text]="true"
+                                        style="display: block; padding: 2px 2px 2px 2px;">
+                                    </pdf-viewer>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 container-fluid" id="tableDiv">
+                                <div class="row" >
+                                    <div class="col-sm-12" >
+                                        <table class="table table-striped table-dark" id="tableMain">
+                                            <thead>
+                                              <tr>
+                                                <th style="width: 500px; text-align: center;">Product Description</th>
+                                                <th style="text-align: center;">Quantity</th>
+                                                <th style="text-align: center;">Unit Price</th>
+                                                <th style="text-align: center;">HSN Code</th>
+                                                <th style="text-align: center;">ASIN</th>
+                                                <th style="text-align: center;">IBSN</th>
+                                                <th style="text-align: center;">Model</th>
+                                                <th style="text-align: center;">IGST</th>
+                                                <th style="text-align: center;">Discount</th>
+                                                <th style="text-align: center;">Total</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                  <tr *ngFor="let item of  selectedInvoice.Items">
+                                                    <td style="width: 500px;"><input type="text" name="item_description" class="form-control"  value={{item.ItemDescription}}></td>
+                                                    <td><input type="text" name="item_quantity" class="form-control" value={{item.Quantity}}></td>
+                                                    <td><input type="text" name="item_unitprice" class="form-control" value={{item.Unitprice}}></td>
+                                                    <td><input type="text" name="item_hsncode" class="form-control" value={{item.HSNCode}}></td>
+                                                    <td><input type="text" name="item_asin" class="form-control" value={{item.ASIN}}></td>
+                                                    <td><input type="text" name="item_isbn" class="form-control" value={{item.ISBN}}></td>
+                                                    <td><input type="text" name="item_model" class="form-control" value={{item.Model}}></td>
+                                                    <td><input type="text" name="item_igst" class="form-control" value={{item.IGST}}></td>
+                                                    <td><input type="text" name="item_discount" class="form-control" value={{item.Discount}}></td>
+                                                    <td><input type="text" name="item_total" class="form-control" value={{item.Total}}></td>
+                                                    <td><span class="glyphicon glyphicon-trash" (click)="deletetableEntryById(selectedInvoice._id,item._id)"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-primary" style="float: right; margin-top: 5px; margin-bottom: 5px;" (click)="cancel()">Cancel</button>
+                                        <button class="btn btn-success" style="float: right; margin-top: 5px; margin-bottom: 5px;">Update</button> 
+                                    </div>
+                                </div>
+                        </form>
+                </div>
+              </div>
+        </div>
+        </div>
+    </div>        

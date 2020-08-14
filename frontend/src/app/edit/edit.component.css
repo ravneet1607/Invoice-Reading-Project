@@ -1,0 +1,39 @@
+#mainDiv{
+    margin : 20px 10px 10px 10px;
+    border: 1px solid blue;
+    border-radius: 2px;
+}
+
+#cardDiv{
+    margin : 20px 10px 10px 10px;
+    border: 1px solid blue;
+    border-radius: 2px;
+}
+
+#formDiv{
+    margin: 10px 5px 10px 10px;
+    border:1px solid black;
+    padding: 10px 5px 10px 5px;
+}
+
+#pdfDiv{
+    width: 815px;
+    height: 730px;
+    overflow-y: scroll;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+#tableDiv{
+    border:1px solid black;
+}
+
+ .green{
+    color:#00FF00;
+ }
+
+ .red{
+     color:#8B0000;
+ }
+
